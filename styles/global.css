@@ -1,0 +1,142 @@
+nav {
+  background-color: black !important;
+  padding-bottom: 10px;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav > li > a {
+  color: white !important;
+  font-family: "sans-serif";
+}
+
+/* Base nav button */
+#navbutton {
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: transparent !important;
+  position: relative;
+  display: inline-block;
+  color: white !important; /* normal state */
+  transition: 0.35s ease;
+  font-family: "cursive";
+}
+
+/* Gradient text ON HOVER */
+#navbutton:hover {
+  background: none !important;
+  background-image: linear-gradient(90deg, yellow, hotpink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent; /* FIXES the black text problem */
+}
+
+/* Underline base (hidden until hover) */
+#navbutton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, yellow, hotpink);
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+
+/* Underline grows on hover */
+#navbutton:hover::after {
+  width: 100%;
+}
+
+/* Quick patch — target anchors with id="navbutton" */
+a#navbutton {
+  display: inline-block; /* required for background-clip to behave */
+  color: rgb(255, 255, 255) !important; /* normal state */
+  font-family: "Arial";
+  position: relative;
+  transition: color 0.35s ease, transform 0.25s ease;
+  -webkit-text-fill-color: initial; /* reset any previous forced transparent */
+}
+
+/* Hover: gradient text only, no background box */
+a#navbutton:hover {
+  background: none !important; /* ensure no bg overrides */
+  color: transparent !important; /* necessary fallback */
+  background-image: linear-gradient(90deg, yellow, hotpink) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important; /* <— critical for Chrome */
+  transform: scale(1.03);
+}
+
+/* Underline animation (growing) */
+a#navbutton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, yellow, hotpink);
+  border-radius: 4px;
+  transition: width 0.36s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+a#navbutton:hover::after {
+  width: 100%;
+}
+
+.nav {
+  font-size: 17px !important;
+  gap: 8px !important;
+  display: flex !important;
+  align-items: center;
+  flex: 1;
+}
+
+.nav li:last-child {
+  margin-left: auto !important;
+  padding-right: 10px;
+}
+
+.footerbg {
+  background-color: black;
+  color: white;
+}
+
+.footer {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+  color: white;
+}
+.mt-5 {
+  margin-top: 0rem !important;
+}
+/* BUTTON: Street, bold, punchy accent colors */
+.btn-primary {
+  background: transparent !important;
+  border: 2px solid hotpink !important; /* bold red outline */
+  color: hotpink !important;
+  font-size: 15px !important;
+  border-radius: 25px !important;
+  padding: 6px 14px !important;
+  width: auto !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  transition: 0.25s ease !important;
+}
+
+.btn-primary:hover {
+  background: hotpink !important;
+  color: black !important;
+  box-shadow: 0px 0px 12px hotpink !important;
+}

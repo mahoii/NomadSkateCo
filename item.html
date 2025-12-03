@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skateboard Details</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/item.css" />
+
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
+  </style>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="container">
+        <ul class="nav">
+          <li id="logo">
+            <a href="index.html" class="nav-link enabled">
+              <img width="90" src="images/NOMADWHITE.PNG" alt="Logo" />
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="workshop.html">Workshops/Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PRODUCT DETAILS -->
+    <section class="container my-5">
+      <div id="product-detail"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="p-4 mt-5 footerbg">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="footer">Contact Us</h2>
+          <ul style="list-style-type: none">
+            <li>
+              <i class="fi-xnsuxl-home-solid"></i> 678 Skateboard Ave., Urban
+              Park
+            </li>
+            <li>
+              <i class="fi-xnsuxl-envelope-solid"></i> support@nomadskateco.com
+            </li>
+          </ul>
+          <div class="input-group input-group-lg">
+            <input
+              placeholder="Sign up for our newsletter!"
+              type="email"
+              class="form-control"
+              aria-label="Large"
+              aria-describedby="inputGroup-sizing-sm"
+            />
+            <button style="color: white !important" class="btn btn-lg">
+              Submit Email Address
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h2 class="footer">Social Media</h2>
+          <ul style="list-style-type: none">
+            <li><i class="fi-xnsuxl-instagram"></i> Instagram</li>
+            <li><i class="fi-xnsuxl-twitter-solid"></i> Twitter</li>
+            <li><i class="fi-xnsuxl-tiktok-solid"></i> TikTok</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("id");
+        console.log("Product ID from URL:", productId);
+
+        fetch("../data/products.json")
+          .then((res) => res.json())
+          .then((products) => {
+            console.log("Products from JSON:", products);
+
+            const container = document.getElementById("product-detail");
+
+            const product = products.find((p) => p.id === productId);
+            console.log("Found product:", product);
+
+            if (!product) {
+              container.innerHTML = `<p class="not-found">Product not found.</p>`;
+              return;
+            }
+
+            container.innerHTML = `
+  <div class="row product-box">
+
+    <!-- LEFT: PRODUCT IMAGE -->
+    <div class="col-md-6 text-center">
+      <div class="neon-wrapper">
+        <img src="${product.image}" class="product-img" alt="${product.name}">
+      </div>
+    </div>
+
+    <!-- RIGHT: PRODUCT INFO -->
+    <div class="col-md-6">
+
+      <!-- TITLE -->
+      <h1 class="product-title">${product.name}</h1>
+
+      <!-- RATING -->
+      <div class="rating">
+        ${"★".repeat(Math.floor(product.rating))} 
+        ${product.rating % 1 !== 0 ? "☆" : ""}
+        <span class="rating-number">${product.rating}/5</span>
+      </div>
+
+      <!-- PRICE -->
+      <p class="product-price">$${product.price.toFixed(2)}</p>
+
+      <!-- DESCRIPTION -->
+      <p class="product-desc">${product.description}</p>
+
+      <!-- DETAILS LIST -->
+      <h3 class="section-title">Product Details</h3>
+      <ul class="details-list">
+        ${product.details.map((d) => `<li>${d}</li>`).join("")}
+      </ul>
+
+      <!-- DIMENSIONS -->
+      <h3 class="section-title">Dimensions</h3>
+      <p class="dimensions">${product.dimensions}</p>
+
+      <!-- ADD TO CART -->
+      <button class="btn add-btn" onclick='addToCart(${JSON.stringify(
+        product
+      )})'>
+        Add to Cart
+      </button>
+    </div>
+  </div>
+
+  <!-- REVIEWS SECTION -->
+  <div class="reviews-box mt-5">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="reviews-list">
+      ${product.reviews
+        .map(
+          (r) => `
+            <div class="review-item">
+              <div class="review-header">
+                <strong>${r.user}</strong>
+                <span class="review-stars">${"★".repeat(r.stars)}</span>
+              </div>
+              <p>${r.comment}</p>
+            </div>
+          `
+        )
+        .join("")}
+    </div>
+  </div>
+`;
+          });
+      });
+
+      function addToCart(product) {
+        console.log("Added to cart:", product.name);
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

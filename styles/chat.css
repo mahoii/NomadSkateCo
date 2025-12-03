@@ -1,0 +1,112 @@
+/* Floating chat button */
+#chat-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ffd200, #ff61b6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  #chat-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 100, 200, 0.6);
+  }
+  
+  /* Chat window */
+  #chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 350px;
+    height: 480px;
+    background: white;
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Header */
+  #chat-header {
+    background: linear-gradient(135deg, #ffd200, #ff61b6);
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #chat-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Messages */
+  #chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-family: Arial;
+  }
+  
+  /* Message bubbles */
+  .message {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin: 6px 0;
+    display: inline-block;
+  }
+  
+  .user {
+    background: #e1ffc7;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  
+  .bot {
+    background: #f0f0f0;
+  }
+  
+  /* Input area */
+  #chat-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  
+  #chat-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  #send-btn {
+    background: #ff61b6;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+  }
+  

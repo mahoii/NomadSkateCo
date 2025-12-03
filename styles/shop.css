@@ -1,0 +1,129 @@
+body {
+  background: linear-gradient(
+    145deg,
+    #000000,
+    #0c0b0b
+  ) !important; /* gritty black gradient */
+}
+
+.SDtitle {
+  color: white;
+  margin-top: 10px;
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+}
+
+/*shop*/
+/* PRODUCT CARDS: Urban gritty, shadowed, high contrast */
+.custom-product-card {
+  background: #111 !important;
+  border: 1px solid #222 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.6) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.custom-product-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0px 10px 25px rgba(255, 255, 0, 0.3) !important; /* yellow street accent */
+}
+
+/* IMAGES: gritty border + punchy edge */
+.custom-product-card img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: white !important;
+  padding: 10px !important;
+  border-bottom: 2px solid #ffdd00 !important;
+  filter: contrast(1.1) saturate(1.1) !important;
+}
+
+/* TITLES: White, bold, graffiti-vibe spacing */
+.card-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  color: #f1f1f1 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+}
+
+/* PRICES: Highlighted accent yellow */
+.price-text {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #ffdd00 !important; /* vibrant yellow */
+  text-shadow: 0px 0px 6px rgba(255, 255, 0, 0.5) !important;
+}
+/* end of shop*/
+
+/* --- STAR RATING STYLE --- */
+/* Base star */
+.star-rating {
+  margin: 6px 0;
+  font-size: 20px;
+  display: block;
+  gap: 2px;
+}
+
+.star {
+  color: gold;
+}
+
+/* Empty star */
+.star.empty {
+  color: #444; /* dark grey */
+  opacity: 0.4;
+}
+
+/* Half star (gradient mask) */
+.star.half-star {
+  background: linear-gradient(90deg, gold 50%, #444 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+}
+
+/* --- CARD NEON BORDER + HOVER GLOW --- */
+.product-card {
+  border-radius: 12px;
+  padding: 15px;
+  background: #111;
+  transition: 0.35s ease;
+  border: 2px solid transparent;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  border-color: hotpink;
+  box-shadow: 0 0 25px hotpink, 0 0 10px yellow inset;
+}
+
+/* --- Title underline effect (yellow → pink) --- */
+.product-title {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.product-title::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, yellow, hotpink);
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+
+.product-title:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,219 @@
+[
+  {
+    "name": "Creature Deck",
+    "price": 90.00,
+    "image": "images/creature.png",
+    "description": "High-quality Creature Skateboard deck, perfect for tricks and cruising.",
+    "id": "creature-deck",
+    "rating": 4.6,
+    "dimensions": "32\" × 8.25\"",
+    "details": [
+      "7-ply Canadian maple",
+      "Medium concave",
+      "Designed for both street and park",
+      "High-impact tested construction"
+    ],
+    "reviews": [
+      {
+        "user": "Jake S.",
+        "comment": "Great pop and really durable. Been skating it for 3 months!",
+        "stars": 5
+      },
+      {
+        "user": "Luis R.",
+        "comment": "Solid deck, amazing for street tricks.",
+        "stars": 4
+      }
+    ]
+  },
+
+  {
+    "name": "Pizza Deck",
+    "price": 100.00,
+    "image": "https://pizzaskateboards.com/cdn/shop/products/SMOKE_TOP_GRAPHIC_64e58a99-f921-43d2-a2dd-4a79b1223e1e_2400x.png?v=1644953759",
+    "description": "Slice through the streets with this tasty Pizza Deck.",
+    "id": "pizza-deck",
+    "rating": 4.2,
+    "dimensions": "31.75\" × 8.0\"",
+    "details": [
+      "7 layers of hardwood maple",
+      "Lightweight deck for technical tricks",
+      "Crisp Pizza graphic with matte finish"
+    ],
+    "reviews": [
+      {
+        "user": "Mason G.",
+        "comment": "Love the design. Perfect shape too.",
+        "stars": 4
+      },
+      {
+        "user": "Ella V.",
+        "comment": "Graphic is fire, but a bit stiff at first.",
+        "stars": 4
+      }
+    ]
+  },
+
+  {
+    "name": "Dragon Deck",
+    "price": 120.00,
+    "image": "https://arrowandbeast.com/cdn/shop/files/palace_dragon_deck.png?v=1756382914&width=1500",
+    "description": "Dragon-themed deck with amazing graphics and durability.",
+    "id": "dragon-deck",
+    "rating": 4.8,
+    "dimensions": "32.5\" × 8.5\"",
+    "details": [
+      "High-strength 7-ply maple",
+      "Heat-pressed for extra durability",
+      "Premium Palace graphic",
+      "Designed for high-impact riders"
+    ],
+    "reviews": [
+      {
+        "user": "Ryan T.",
+        "comment": "One of the strongest decks I've skated.",
+        "stars": 5
+      },
+      {
+        "user": "Noah M.",
+        "comment": "The dragon graphic is insane in person.",
+        "stars": 5
+      }
+    ]
+  },
+
+  {
+    "name": "Tiger Deck",
+    "price": 110.00,
+    "image": "images/Tiger.png",
+    "description": "Bold Tiger Deck, great for style and performance.",
+    "id": "tiger-deck",
+    "rating": 4.4,
+    "dimensions": "31.75\" × 8.375\"",
+    "details": [
+      "Classic Santa Cruz reissue shape",
+      "Thick and durable construction",
+      "Perfect for pool and transition skating"
+    ],
+    "reviews": [
+      {
+        "user": "Brandon F.",
+        "comment": "Really strong deck and nostalgic vibes.",
+        "stars": 5
+      },
+      {
+        "user": "Sam K.",
+        "comment": "A bit wider than expected, but solid ride.",
+        "stars": 4
+      }
+    ]
+  },
+
+  {
+    "name": "Tongue Deck",
+    "price": 170.00,
+    "image": "images/tongue.png",
+    "description": "Classic Tongue Deck with vibrant graphics for collectors and skaters.",
+    "id": "tongue-deck",
+    "rating": 4.1,
+    "dimensions": "32\" × 8.125\"",
+    "details": [
+      "Collector-grade gloss graphic",
+      "Smooth concave for cruising",
+      "Large standing platform"
+    ],
+    "reviews": [
+      {
+        "user": "Zoe H.",
+        "comment": "Totally a wall-hanger deck for me. Looks amazing!",
+        "stars": 4
+      },
+      {
+        "user": "Marcus L.",
+        "comment": "Good ride but heavy for technical tricks.",
+        "stars": 3
+      }
+    ]
+  },
+
+  {
+    "name": "Arizona Deck",
+    "price": 140.00,
+    "image": "https://www.drinkarizona.eu/cdn/shop/files/Skateboard_shopify.png?v=1692190923&width=1946",
+    "description": "Arizona-themed deck with striking visuals and smooth ride.",
+    "id": "arizona-deck",
+    "rating": 4.7,
+    "dimensions": "32\" × 8.25\"",
+    "details": [
+      "Arizona Ice Tea collaboration",
+      "Smooth concave for comfort",
+      "Lightweight maple construction"
+    ],
+    "reviews": [
+      {
+        "user": "Jayden R.",
+        "comment": "The cleanest graphic I've owned.",
+        "stars": 5
+      },
+      {
+        "user": "Leo S.",
+        "comment": "Perfect board for cruising the city.",
+        "stars": 4
+      }
+    ]
+  },
+
+  {
+    "name": "Anti-Hero Deck",
+    "price": 150.00,
+    "image": "images/anti.png",
+    "description": "Anti-Hero Deck for those who ride hard and stay bold.",
+    "id": "antihero-deck",
+    "rating": 4.3,
+    "dimensions": "32.2\" × 8.38\"",
+    "details": [
+      "Anti-Hero classic shape",
+      "Ideal for high-speed skating",
+      "Strong, stiff, and responsive"
+    ],
+    "reviews": [
+      {
+        "user": "Chris D.",
+        "comment": "Perfect concave, really responsive.",
+        "stars": 5
+      },
+      {
+        "user": "Trent P.",
+        "comment": "Durable but graphic scratches fast.",
+        "stars": 4
+      }
+    ]
+  },
+
+  {
+    "name": "K. Haring Deck",
+    "price": 250.00,
+    "image": "images/kh.png",
+    "description": "Keith Haring artwork on a premium deck, perfect for art lovers.",
+    "id": "kharing-deck",
+    "rating": 4.9,
+    "dimensions": "31.75\" × 8.0\"",
+    "details": [
+      "Official Keith Haring museum release",
+      "Limited edition print",
+      "High-quality veneer for collectors"
+    ],
+    "reviews": [
+      {
+        "user": "Julia A.",
+        "comment": "Absolutely stunning piece. Worth every dollar.",
+        "stars": 5
+      },
+      {
+        "user": "Tomas E.",
+        "comment": "Would never skate it—it's art. Looks amazing on my wall.",
+        "stars": 5
+      }
+    ]
+  }
+]

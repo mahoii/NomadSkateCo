@@ -1,0 +1,17 @@
+.workshopmain {
+  background: linear-gradient(145deg, #0a0a0a, #1b1b1b) !important;
+}
+
+.workshop-header {
+  display: flex;
+  justify-content: center;
+  font-family: "Honk", system-ui;
+  font-size: 3.5em;
+}
+
+.workshop-header-desc {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 30px;
+}

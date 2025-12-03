@@ -1,0 +1,143 @@
+/* Dark background */
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Product container */
+.product-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Product title */
+.product-title {
+  font-family: "Honk", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* Price */
+.product-price {
+  font-size: 1.8rem;
+  color: yellow;
+  margin-bottom: 20px;
+}
+
+/* Product description */
+.product-desc {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Product Image */
+.product-img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Neon Image Wrapper (same as about.css) */
+.neon-wrapper {
+  display: inline-block;
+  padding: 2px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, yellow, hotpink);
+  box-shadow: none;
+  transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.neon-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: -7px -7px 15px yellow, 7px 7px 15px hotpink;
+}
+
+/* Button */
+.add-btn {
+  background: linear-gradient(135deg, yellow, hotpink);
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+  box-shadow: -5px -5px 15px yellow, 5px 5px 15px hotpink;
+}
+
+/* "Product not found" styling */
+.not-found {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 100px;
+  color: hotpink;
+}
+
+/* Rating */
+.rating {
+  font-size: 1.6rem;
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+.rating-number {
+  font-size: 1.1rem;
+  color: hotpink;
+  margin-left: 8px;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: hotpink;
+  font-family: "Honk", sans-serif;
+}
+
+/* Details list */
+.details-list li {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+/* Dimensions */
+.dimensions {
+  font-size: 1.2rem;
+  color: yellow;
+}
+
+/* Review box */
+.reviews-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Single Review */
+.review-item {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-stars {
+  color: yellow;
+  font-size: 1.2rem;
+}
